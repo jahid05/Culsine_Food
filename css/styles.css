@@ -14,9 +14,21 @@
     --secondary: #212121;
     --text: #c3c9c9;
 }
+.button{
+	background-color: var(--primary);
+	border: none;
+	padding: 12px 25px;
+	color: var(--bg-color);
+	font-size: 18px;
+	font-weight: 500;
+	border-radius: 25px 25px 0px 25px;
+}
+.button:hover{
+	background-color: var(--secondary);
+	transition: all 500ms linear;
+}
 
 header{
-	background-color: var(--bg-color);
 	height: 100vh;
 	width: 100%;
 }
@@ -40,10 +52,8 @@ header{
 
 .navbar .navbar-toggler{
 	color: var(--primary);
-	font-weight: bold;
-	font-size: 32px;
+	font-size: 30px;
 }
-
 .nav-btn button i {
 	color: var(--bg-color);
 	font-size: 20px;
@@ -55,11 +65,75 @@ header{
 	height: 100vh;
 	position: relative;
 }
-.banner-right .banner-dishe img{
+.banner-right .banner-dishe{
 	position: absolute;
-	left: -15rem;
 	top: 50%;
+	transform: translate(-50%, -50%);
+}
+.banner-right .main-dishe{
+	animation: spin 30s linear infinite;
+}
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
+.banner-right .round-shape{
+	position: absolute;
+	top: 50%;
+	left: 20%;
+	transform: translate(-50%, -50%);
+	z-index: 10;
+}
+.banner-right .dishe_1{
+	filter: blur(1px);
+	position: absolute;
+	top: -10%;
+	left: 12%;
+	transform: translate(-50%, -50%);
+	z-index: 20;
+}
+.banner-right .dishe_2{
+	position: absolute;
+	top: 50%;
+	left: -16%;
+	transform: translate(-50%, -50%);
+	z-index: 20;
+}
+.banner-right .dishe_3{
+	filter: blur(1px);
+	position: absolute;
+	bottom: -60%;
+	left: 15%;
+	transform: translate(-50%, -50%);
+	z-index: 20;
 }
 .banner-left{
-	background-color: var(--bg-color);
+	padding: 14rem 19rem;
+	position: relative;
 }
+.banner-left h1{
+	font-size: 82px;
+	font-weight: 700;
+}
+.banner-left h1 span{
+	color: var(--primary);
+}
+.banner-left p{
+	font-size: 18px;
+	line-height: 27px;
+	margin-top: 18px;
+	margin-bottom: 30px;
+}
+
+@media (min-width: 576px) { 
+	.banner-left {
+		padding: 10rem 3rem;
+		position: relative;
+	}
+	.banner-left h1 {
+		font-size: 60px;
+		font-weight: 700;
+	}
+ }
