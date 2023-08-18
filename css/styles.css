@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
-*{
+* {
 	font-family: 'Roboto', sans-serif;
 	margin: 0;
 	padding: 0;
@@ -8,13 +8,14 @@
 	box-sizing: border-box;
 }
 
-:root{
-    --bg-color: #e1f0f2;
-    --primary: #FF5F1B;
-    --secondary: #212121;
-    --text: #c3c9c9;
+:root {
+	--bg-color: #e1f0f2;
+	--primary: #FF5F1B;
+	--secondary: #212121;
+	--text: #c3c9c9;
 }
-.button{
+
+.button {
 	background-color: var(--primary);
 	border: none;
 	padding: 12px 25px;
@@ -23,85 +24,110 @@
 	font-weight: 500;
 	border-radius: 25px 25px 0px 25px;
 }
-.button:hover{
+
+.button:hover {
 	background-color: var(--secondary);
 	transition: all 500ms linear;
 }
 
-header{
+header {
 	height: 100vh;
 	width: 100%;
+	background-color: var(--bg-color);
 }
 
 /* Navbar Section */
-.navbar .navbar-nav .nav-item .nav-link{
+.navbar .navbar-nav .nav-item .nav-link {
 	color: var(--secondary);
 	font-weight: 500;
 	font-size: 20px;
-	margin:0 20px;
+	margin: 0 20px;
 }
 
-.navbar .navbar-nav .nav-item .nav-link:hover{
+.navbar .navbar-nav .nav-item .nav-link:hover {
 	color: #FF5F1B;
 	transition: all 700ms;
 }
-.navbar .navbar-nav .nav-item .active{
+
+.navbar .navbar-nav .nav-item .active {
 	color: var(--primary);
 	font-weight: 500;
 }
 
-.navbar .navbar-toggler{
+.navbar .navbar-toggler {
 	color: var(--primary);
 	font-size: 30px;
 }
+
 .nav-btn button i {
 	color: var(--bg-color);
 	font-size: 20px;
 }
 
 /* Banner Section */
-.banner-right{
+.banner-right {
 	background-color: var(--secondary);
 	height: 100vh;
 	position: relative;
 }
-.banner-right .banner-dishe{
+
+.banner-right .banner-dishe {
 	position: absolute;
 	top: 50%;
 	transform: translate(-50%, -50%);
 }
-.banner-right .main-dishe{
+
+/* .banner-right .main-dishe{
 	animation: spin 30s linear infinite;
-}
-@keyframes spin { 
+} */
+/* @keyframes spin { 
     100% { 
         -webkit-transform: rotate(360deg); 
         transform:rotate(360deg); 
     } 
+} */
+.banner-right .banner_card1 {
+	position: absolute;
+	bottom: -60%;
+	left: 90%;
+	transform: translate(-50%, -50%);
+	z-index: 20;
 }
-.banner-right .round-shape{
+
+.banner-right .banner_card2 {
+	position: absolute;
+	top: -10%;
+	left: 75%;
+	transform: translate(-50%, -50%);
+	z-index: 20;
+}
+
+.banner-right .round-shape {
 	position: absolute;
 	top: 50%;
 	left: 20%;
 	transform: translate(-50%, -50%);
 	z-index: 10;
 }
-.banner-right .dishe_1{
+
+.banner-right .dishe_1 {
 	filter: blur(1px);
 	position: absolute;
-	top: -10%;
-	left: 12%;
+	top: -14%;
+	left: 20%;
 	transform: translate(-50%, -50%);
 	z-index: 20;
 }
-.banner-right .dishe_2{
+
+.banner-right .dishe_2 {
 	position: absolute;
 	top: 50%;
 	left: -16%;
 	transform: translate(-50%, -50%);
 	z-index: 20;
 }
-.banner-right .dishe_3{
+
+.banner-right .dishe_3 {
 	filter: blur(1px);
 	position: absolute;
 	bottom: -60%;
@@ -109,31 +135,95 @@ header{
 	transform: translate(-50%, -50%);
 	z-index: 20;
 }
-.banner-left{
+
+.banner-left {
 	padding: 14rem 19rem;
 	position: relative;
 }
-.banner-left h1{
+
+.banner-left h1 {
 	font-size: 82px;
 	font-weight: 700;
 }
-.banner-left h1 span{
+
+.banner-left h1 span {
 	color: var(--primary);
 }
-.banner-left p{
+
+.banner-left p {
 	font-size: 18px;
 	line-height: 27px;
 	margin-top: 18px;
 	margin-bottom: 30px;
 }
 
-@media (min-width: 576px) { 
+@media (max-width: 768px) {
+	.navbar {
+		background-color: var(--bg-color);
+	}
+
+	.nav-btn button i {
+		color: var(--secondary);
+		font-size: 20px;
+		padding: 2rem 1rem;
+	}
+
 	.banner-left {
-		padding: 10rem 3rem;
+		padding: 8rem 2rem;
 		position: relative;
 	}
+
 	.banner-left h1 {
-		font-size: 60px;
+		font-size: 40px;
 		font-weight: 700;
 	}
- }
+
+	.banner-left p {
+		font-size: 16px;
+		line-height: 20px;
+		margin-top: 15px;
+		margin-bottom: 25px;
+	}
+
+	.banner-right .banner-dishe {
+		width: 50%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.banner-right .dishe_1 {
+		width: 75%;
+		top: -35%;
+		left: 40%;
+		transform: translate(-50%, -50%);
+	}
+
+	.banner-right .dishe_2 {
+		width: 75%;
+		top: 55%;
+		left: -25%;
+		transform: translate(-50%, -50%);
+	}
+
+	.banner-right .dishe_3 {
+		width: 75%;
+		bottom: -100%;
+		left: 40%;
+		transform: translate(-50%, -50%);
+	}
+
+	.banner-right .banner_card1 {
+		width: 60%;
+		bottom: -75%;
+		left: 100%;
+		transform: translate(-50%, -50%);
+	}
+
+	.banner-right .banner_card2 {
+		width: 75%;
+		top: 5%;
+		left: 95%;
+		transform: translate(-50%, -50%);
+	}
+}
