@@ -56,7 +56,7 @@ header {
 
 .navbar .navbar-toggler {
 	color: var(--primary);
-	font-size: 30px;
+	font-size: 25px;
 }
 
 .nav-btn button i {
@@ -65,6 +65,31 @@ header {
 }
 
 /* Banner Section */
+.banner {
+	position: relative;
+}
+
+.banner .effeact_1 {
+	z-index: 30;
+	left: 0;
+	top: 0;
+	position: absolute;
+}
+
+.banner .effeact_2 {
+	z-index: 30;
+	right: 10%;
+	top: 30%;
+	position: absolute;
+}
+
+.banner .effeact_3 {
+	z-index: 30;
+	right: 0;
+	top: 10%;
+	position: absolute;
+}
+
 .banner-right {
 	background-color: var(--secondary);
 	height: 100vh;
@@ -111,7 +136,7 @@ header {
 }
 
 .banner-right .dishe_1 {
-	filter: blur(1px);
+	opacity: 0.5;
 	position: absolute;
 	top: -14%;
 	left: 20%;
@@ -128,7 +153,7 @@ header {
 }
 
 .banner-right .dishe_3 {
-	filter: blur(1px);
+	opacity: 0.5;
 	position: absolute;
 	bottom: -60%;
 	left: 15%;
@@ -226,4 +251,23 @@ header {
 		left: 95%;
 		transform: translate(-50%, -50%);
 	}
-}
+	.banner .effeact_1 {
+		z-index: 30;
+		left: 0;
+		top: 0;
+		position: absolute;
+	}
+	
+	.banner .effeact_2 {
+		z-index: 30;
+		right: 10%;
+		top: 35%;
+		position: absolute;
+	}
+	
+	.banner .effeact_3 {
+		z-index: 30;
+		right: 0;
+		top: 53%;
+		position: absolute;
+	}
